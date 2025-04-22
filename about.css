@@ -27,3 +27,171 @@ img{
 	width: 50px;
 	height: auto;
 }
+/* Reset some default margins/paddings */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: #f4f9f9;
+    color: #333;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #2f5d62;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #63b7af;
+    color: #fff;
+}
+
+/* About Section */
+.about-section {
+    padding: 40px;
+    text-align: center;
+    background: linear-gradient(to right, #a8edea, #fed6e3);
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* Image Cards Layout */
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.column {
+    flex: 1 1 250px;
+    max-width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.column:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+}
+
+/* Image Styling */
+.column img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Content inside cards */
+.container {
+    padding: 15px;
+    text-align: center;
+}
+
+.container h6 {
+    font-size: 16px;
+    margin: 10px 0 5px;
+    color: #2f5d62;
+}
+
+.container p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Buttons */
+.button {
+    margin-top: 10px;
+    background: linear-gradient(45deg, #63b7af, #2f5d62);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.button:hover {
+    background: linear-gradient(45deg, #2f5d62, #63b7af);
+    transform: scale(1.05);
+}
+
+/* Funfacts and Skills */
+.facts, ol, table {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 2px solid #2f5d62;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+th {
+    background-color: #63b7af;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.wave-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/wavecut.png');
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: -1;
+}
+body {
+    background: linear-gradient(to top, #00c6fb, #005bea);
+    background-size: 400% 400%;
+    animation: waveAnimation 10s ease infinite;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+/* Water wave-like animation */
+@keyframes waveAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
